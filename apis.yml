@@ -58,7 +58,7 @@ common:
     url: https://docs.aws.amazon.com/dynamodb/
   - type: Pricing
     url: https://aws.amazon.com/dynamodb/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://portal.aws.amazon.com/billing/signup
 maintainers:
   - FN: Kin Lane
