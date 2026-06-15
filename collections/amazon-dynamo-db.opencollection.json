@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon DynamoDB API",
+    "version": "2012-08-10"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Invoke a DynamoDB action",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://dynamodb.{region}.amazonaws.com/",
+        "headers": [
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "Content-Type",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "All DynamoDB low-level API actions are invoked by POSTing a JSON\nrequest body to the regional endpoint root, with the action name\nspecified in the `X-Amz-Target` header in the form\n`DynamoDB_20120810.<ActionName>`.\n"
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,364 @@
+{
+  "item": [
+    {
+      "id": "52c1d523-9555-4f22-ab95-d338eabba955",
+      "name": "Tables",
+      "description": {
+        "content": "Table management operations.",
+        "type": "text/plain"
+      },
+      "item": [],
+      "event": []
+    },
+    {
+      "id": "fdb83903-65ba-4fdd-9191-868724359056",
+      "name": "Items",
+      "description": {
+        "content": "Item-level CRUD operations.",
+        "type": "text/plain"
+      },
+      "item": [],
+      "event": []
+    },
+    {
+      "id": "75c202af-3f8c-4d63-a999-73e083ad3763",
+      "name": "Query",
+      "description": {
+        "content": "Query and scan operations.",
+        "type": "text/plain"
+      },
+      "item": [],
+      "event": []
+    },
+    {
+      "id": "5da16521-4265-42c2-836c-bb99adaf644a",
+      "name": "Transactions",
+      "description": {
+        "content": "Transactional read/write operations.",
+        "type": "text/plain"
+      },
+      "item": [],
+      "event": []
+    },
+    {
+      "id": "c5fb3034-caff-42b7-8c47-c1e3ceb267dc",
+      "name": "Streams",
+      "description": {
+        "content": "DynamoDB Streams operations.",
+        "type": "text/plain"
+      },
+      "item": [],
+      "event": []
+    },
+    {
+      "id": "2c6b3303-bc9f-4177-9d01-9cf6c18e3e1b",
+      "name": "Invoke a DynamoDB action",
+      "request": {
+        "name": "Invoke a DynamoDB action",
+        "description": {
+          "content": "All DynamoDB low-level API actions are invoked by POSTing a JSON\nrequest body to the regional endpoint root, with the action name\nspecified in the `X-Amz-Target` header in the form\n`DynamoDB_20120810.<ActionName>`.\n",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            ""
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "AWS region identifier.",
+              "type": "any",
+              "value": "{{region}}",
+              "key": "region"
+            }
+          ]
+        },
+        "header": [
+          {
+            "disabled": false,
+            "description": "(Required) ",
+            "key": "X-Amz-Target",
+            "value": "<string>"
+          },
+          {
+            "disabled": false,
+            "description": "(Required) ISO 8601 timestamp of the request.",
+            "key": "X-Amz-Date",
+            "value": "<string>"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-amz-json-1.0"
+          },
+          {
+            "key": "Accept",
+            "value": "application/x-amz-json-1.0"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>"
+        }
+      },
+      "response": [
+        {
+          "id": "3f9ad9b5-a8f7-4f03-90ef-bb1c98b694c4",
+          "name": "Action-specific JSON response.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region identifier.",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ISO 8601 timestamp of the request.",
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "application/x-amz-json-1.0"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/x-amz-json-1.0"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "acf6c58c-d25b-4f5d-8f7b-1df904ee9031",
+          "name": "Client error.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region identifier.",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ISO 8601 timestamp of the request.",
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.0"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>"
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "7cef91dd-3d95-4b1a-8405-8c2b06033401",
+          "name": "Server error.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region identifier.",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ISO 8601 timestamp of the request.",
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.0"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>"
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region identifier.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://dynamodb.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7f049f56-c5d3-4adf-810d-08a39ac3ff9c",
+    "name": "Amazon DynamoDB API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon DynamoDB low-level HTTPS JSON API for managing tables and indexes,\ncreating, reading, updating, and deleting items, querying and scanning\ntables, performing transactions, and processing stream records.\nAll requests use HTTP POST against the regional endpoint with an\nX-Amz-Target header indicating the action, JSON body payload, and\nAWS Signature Version 4 (SigV4) signed Authorization header.\n\n\nContact Support:\n Name: Amazon Web Services",
+      "type": "text/plain"
+    }
+  }
+}
