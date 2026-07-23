@@ -1,0 +1,114 @@
+openapi: 3.1.0
+info:
+  title: Amazon DynamoDB Amazon DynamoDB API API
+  version: '2012-08-10'
+  description: 'Amazon DynamoDB low-level HTTPS JSON API for managing tables and indexes,
+
+    creating, reading, updating, and deleting items, querying and scanning
+
+    tables, performing transactions, and processing stream records.
+
+    All requests use HTTP POST against the regional endpoint with an
+
+    X-Amz-Target header indicating the action, JSON body payload, and
+
+    AWS Signature Version 4 (SigV4) signed Authorization header.
+
+    '
+  contact:
+    name: Amazon Web Services
+    url: https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html
+servers:
+- url: https://dynamodb.{region}.amazonaws.com
+  description: DynamoDB regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region identifier.
+security:
+- SigV4: []
+tags:
+- name: Amazon DynamoDB API
+paths:
+  /:
+    post:
+      summary: Invoke a DynamoDB action
+      description: 'All DynamoDB low-level API actions are invoked by POSTing a JSON
+
+        request body to the regional endpoint root, with the action name
+
+        specified in the `X-Amz-Target` header in the form
+
+        `DynamoDB_20120810.<ActionName>`.
+
+        '
+      operationId: invokeDynamoDbAction
+      parameters:
+      - in: header
+        name: X-Amz-Target
+        required: true
+        schema:
+          type: string
+          enum:
+          - DynamoDB_20120810.CreateTable
+          - DynamoDB_20120810.DeleteTable
+          - DynamoDB_20120810.DescribeTable
+          - DynamoDB_20120810.ListTables
+          - DynamoDB_20120810.UpdateTable
+          - DynamoDB_20120810.PutItem
+          - DynamoDB_20120810.GetItem
+          - DynamoDB_20120810.UpdateItem
+          - DynamoDB_20120810.DeleteItem
+          - DynamoDB_20120810.BatchGetItem
+          - DynamoDB_20120810.BatchWriteItem
+          - DynamoDB_20120810.Query
+          - DynamoDB_20120810.Scan
+          - DynamoDB_20120810.TransactGetItems
+          - DynamoDB_20120810.TransactWriteItems
+          - DynamoDB_20120810.ExecuteStatement
+          - DynamoDB_20120810.ExecuteTransaction
+          - DynamoDB_20120810.BatchExecuteStatement
+          - DynamoDB_20120810.DescribeStream
+          - DynamoDB_20120810.GetRecords
+          - DynamoDB_20120810.GetShardIterator
+          - DynamoDB_20120810.ListStreams
+      - in: header
+        name: X-Amz-Date
+        required: true
+        schema:
+          type: string
+        description: ISO 8601 timestamp of the request.
+      - in: header
+        name: Content-Type
+        required: true
+        schema:
+          type: string
+          enum:
+          - application/x-amz-json-1.0
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.0:
+            schema:
+              type: object
+              description: Action-specific JSON request body.
+      responses:
+        '200':
+          description: Action-specific JSON response.
+          content:
+            application/x-amz-json-1.0:
+              schema:
+                type: object
+        '400':
+          description: Client error.
+        '500':
+          description: Server error.
+      tags:
+      - Amazon DynamoDB API
+components:
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed request.
