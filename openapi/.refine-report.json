@@ -1,0 +1,14 @@
+{
+  "provider": "amazon-dynamo-db",
+  "sources": [
+    "amazon-dynamo-db-amazon-dynamodb-api-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-dynamo-db-amazon-dynamodb-api-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
