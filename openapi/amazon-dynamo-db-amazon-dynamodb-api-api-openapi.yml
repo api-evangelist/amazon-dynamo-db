@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Amazon DynamoDB Amazon DynamoDB API API
+  title: Amazon DynamoDB API
   version: '2012-08-10'
   description: 'Amazon DynamoDB low-level HTTPS JSON API for managing tables and indexes,
 
